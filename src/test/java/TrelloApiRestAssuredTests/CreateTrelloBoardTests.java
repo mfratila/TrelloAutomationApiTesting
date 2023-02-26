@@ -1,4 +1,4 @@
-package TrelloApiTests;
+package TrelloApiRestAssuredTests;
 
 import Utility.BaseTest;
 import Utility.Constants;
@@ -12,7 +12,7 @@ import static TestUtilities.BuildRequest.*;
 import static TestUtilities.SendRequest.*;
 import static TestUtilities.TestDataProvider.*;
 import static TestUtilities.CheckResponseIsValid.*;
-
+import static TestUtilities.CleanupAfterTest.*;
 
 public class CreateTrelloBoardTests extends BaseTest {
     @Test
@@ -27,5 +27,7 @@ public class CreateTrelloBoardTests extends BaseTest {
         assertResponseValidity(actualResponse);
         logTestResult(context, testLogger);
 
+        String boardId = getBoardIdFromResponse(actualResponse);
+        cleanupAfterTest(requestSpec, boardId);
     }
 }

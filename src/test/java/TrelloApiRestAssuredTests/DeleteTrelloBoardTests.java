@@ -1,4 +1,4 @@
-package TrelloApiTests;
+package TrelloApiRestAssuredTests;
 
 import Utility.BaseTest;
 import Utility.Constants;
