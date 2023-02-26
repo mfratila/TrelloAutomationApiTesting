@@ -1,5 +1,4 @@
 {
     "name": "Updated Testing Automation Board",
-    "desc": "This is an updated testing board created using RestAssured Library",
-    "idOrganization": "16f877d21603199997731ee7"
+    "desc": "This is an updated testing board created using RestAssured Library"
 }

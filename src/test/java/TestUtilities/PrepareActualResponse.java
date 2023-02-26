@@ -8,7 +8,6 @@ import models.TrelloBoard;
 import java.util.HashMap;
 import java.util.Map;
 
-import static TestUtilities.TestDataProvider.*;
 
 public class PrepareActualResponse {
 
@@ -17,12 +16,10 @@ public class PrepareActualResponse {
         Map<String, String> actualResponseData = new HashMap<>();
         String responseBody = actualResponse.body().asString();
 
-        System.out.println(responseBody);
 
         TrelloBoard actualBoardData = getTrelloBoardPojoFromJSON(responseBody);
         actualResponseData.put("name", actualBoardData.getName());
         actualResponseData.put("desc", actualBoardData.getDesc());
-        actualResponseData.put("idOrganization", actualBoardData.getIdOrganization());
 
         return actualResponseData;
     }

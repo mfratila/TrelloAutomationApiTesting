@@ -3,8 +3,10 @@ package TrelloApiTests;
 import Utility.BaseTest;
 
 import Utility.Constants;
+import com.aventstack.extentreports.ExtentTest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.response.Response;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -22,17 +24,21 @@ public class GetTrelloBoardTests extends BaseTest {
 
 
     @Test
-    public void getAllBoards() {
+    public void getAllBoards(ITestContext context) {
+        ExtentTest testLogger = createTestLogger("Get all Boards",
+                "Test that verifies the functionality of the GET method");
 
         Response actualResponse = sendGETRequest(buildRequest(requestSpec));
 
         assertResponseValidity(actualResponse);
-
+        logTestResult(context, testLogger);
     }
 
     @Test
-    public void getBoardById() throws JsonProcessingException {
+    public void getBoardById(ITestContext context) throws JsonProcessingException {
 
+        ExtentTest testLogger = createTestLogger("Get Board by ID",
+                "Test that verifies the functionality of the GET method when provided a specific ID as a Path Parameter");
         String boardId = getBoardIdFromFirstBoard();
         Response actualResponse = sendGETByIdRequest(buildRequestWithPathParam(requestSpec, ID_PATH_PARAM, boardId));
 
@@ -41,7 +47,7 @@ public class GetTrelloBoardTests extends BaseTest {
 
         assertResponseValidity(actualResponse);
         assertBoardData(actualResponseData, expectedResponseData);
-
+        logTestResult(context, testLogger);
     }
 
 }

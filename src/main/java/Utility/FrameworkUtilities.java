@@ -1,11 +1,12 @@
 package Utility;
 
-import io.restassured.specification.RequestSpecification;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,10 +15,12 @@ import java.util.Properties;
 
 import io.restassured.response.Response;
 import org.json.simple.parser.ParseException;
+import org.testng.ITestContext;
+
 
 public class FrameworkUtilities {
     protected static Properties properties;
-
+    protected static ExtentReports extent;
 
     public static String readConfigurationFile(String key) {
         try {
@@ -38,14 +41,13 @@ public class FrameworkUtilities {
         try  {
             obj = parser.parse(new FileReader(filePath));
         } catch (NullPointerException | IOException | ParseException e) {
-            AllureLogger.logToAllure("Error in JSON object parson with the exception: " + e);
+           e.printStackTrace();
         }
 
         return (JSONObject) obj;
     }
 
     public void logResponseAsString(Response response) {
-        AllureLogger.logToAllure(response.asString());
         System.out.println(response.asString());
     }
 
@@ -66,4 +68,27 @@ public class FrameworkUtilities {
 
         return (String) postRequestPayload.get(key);
     }
+
+    public ExtentTest createTestLogger(String testTitle, String testDescription) {
+        ExtentTest test = extent.createTest(testTitle, testDescription);
+        test.log(Status.INFO, "Sending Request");
+
+        return test;
+    }
+
+    public void logResponseBody(ExtentTest test, Response response) {
+        String responseBody = response.then().log().body().toString();
+        test.log(Status.INFO, "Response Body: " + responseBody);
+    }
+
+    public void logTestResult(ITestContext context, ExtentTest test) {
+        if (context.getFailedTests().size() > 0) {
+            test.log(Status.FAIL, "Request failed: " + context.getFailedTests().getAllResults());
+        } else if (context.getSkippedTests().size() > 0) {
+            test.log(Status.SKIP, "Test skipped: " + context.getSkippedTests().getAllResults());
+        } else {
+            test.log(Status.PASS, "Request successful");
+        }
+    }
+
 }

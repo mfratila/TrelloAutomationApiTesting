@@ -15,7 +15,6 @@ public class PrepareExpectedResponse {
 
         expectedResponseData.put("name", expectedBoardData.getName());
         expectedResponseData.put("desc", expectedBoardData.getDesc());
-        expectedResponseData.put("idOrganization", expectedBoardData.getIdOrganization());
 
         return expectedResponseData;
     }

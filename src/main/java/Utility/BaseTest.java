@@ -1,9 +1,12 @@
 package Utility;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -11,13 +14,17 @@ public abstract class BaseTest extends FrameworkUtilities {
     protected static RequestSpecification requestSpec;
     protected static ResponseSpecification responseSpec;
 
+
     @BeforeSuite
     public void setBaseURI() {
-        AllureLogger.logToAllure("The base URI is: " + readConfigurationFile("Base_URI"));
         requestSpec= new RequestSpecBuilder()
                 .setBaseUri(readConfigurationFile("Base_URI"))
                 .addQueryParams(getApiKeyAndTokenToRequestSpecification())
                 .build();
+
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("test-output/extent.html");
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
     }
 
     @BeforeMethod
@@ -25,5 +32,11 @@ public abstract class BaseTest extends FrameworkUtilities {
         responseSpec = new ResponseSpecBuilder()
                 .expectStatusCode(200)
                 .build();
+    }
+
+
+    @AfterSuite
+    public void afterSuite() {
+        extent.flush();
     }
 }
