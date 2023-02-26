@@ -1,4 +1,4 @@
-package TestUtilities;
+package RestAssuredTestUtilities;
 
 import io.restassured.specification.RequestSpecification;
 import models.TrelloBoard;

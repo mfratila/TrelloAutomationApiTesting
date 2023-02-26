@@ -8,11 +8,11 @@ import models.TrelloBoard;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
-import static TestUtilities.BuildRequest.*;
-import static TestUtilities.SendRequest.*;
+import static RestAssuredTestUtilities.BuildRequest.*;
+import static RestAssuredTestUtilities.SendRequest.*;
 import static TestUtilities.TestDataProvider.*;
 import static TestUtilities.CheckResponseIsValid.*;
-import static TestUtilities.CleanupAfterTest.*;
+import static RestAssuredTestUtilities.CleanupAfterTest.*;
 
 public class CreateTrelloBoardTests extends BaseTest {
     @Test

@@ -19,7 +19,7 @@ public abstract class BaseTest extends FrameworkUtilities {
     public void setBaseURI() {
         requestSpec= new RequestSpecBuilder()
                 .setBaseUri(readConfigurationFile("Base_URI"))
-                .addQueryParams(getApiKeyAndTokenToRequestSpecification())
+                .addQueryParams(getApiKeyAndTokenFromConfigFile())
                 .build();
 
         ExtentSparkReporter htmlReporter = new ExtentSparkReporter("test-output/extent.html");

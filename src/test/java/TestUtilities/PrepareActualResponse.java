@@ -16,7 +16,6 @@ public class PrepareActualResponse {
         Map<String, String> actualResponseData = new HashMap<>();
         String responseBody = actualResponse.body().asString();
 
-
         TrelloBoard actualBoardData = getTrelloBoardPojoFromJSON(responseBody);
         actualResponseData.put("name", actualBoardData.getName());
         actualResponseData.put("desc", actualBoardData.getDesc());

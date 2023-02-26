@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 
 import java.util.Map;
 
-import static TestUtilities.BuildRequest.*;
-import static TestUtilities.SendRequest.*;
+import static RestAssuredTestUtilities.BuildRequest.*;
+import static RestAssuredTestUtilities.SendRequest.*;
 import static TestUtilities.TestDataProvider.*;
 import static TestUtilities.CheckResponseIsValid.*;
 import static TestUtilities.PrepareActualResponse.*;

@@ -12,14 +12,14 @@ import org.testng.annotations.Test;
 
 import java.util.Map;
 
-import static TestUtilities.BuildRequest.*;
+import static RestAssuredTestUtilities.BuildRequest.*;
 import static TestUtilities.PrepareActualResponse.*;
 import static TestUtilities.PrepareExpectedResponse.*;
-import static TestUtilities.SendRequest.*;
+import static RestAssuredTestUtilities.SendRequest.*;
 import static TestUtilities.TestAssertions.*;
 import static TestUtilities.TestDataProvider.*;
 import static TestUtilities.CheckResponseIsValid.*;
-import static TestUtilities.CleanupAfterTest.*;
+import static RestAssuredTestUtilities.CleanupAfterTest.*;
 
 
 public class UpdateTrelloBoardTests extends BaseTest {

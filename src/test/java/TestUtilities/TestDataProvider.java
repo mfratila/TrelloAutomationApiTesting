@@ -1,12 +1,13 @@
 package TestUtilities;
 
 import Utility.BaseTest;
+import com.google.gson.Gson;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import models.TrelloBoard;
 
-import static TestUtilities.BuildRequest.*;
-import static TestUtilities.SendRequest.*;
+import static RestAssuredTestUtilities.BuildRequest.*;
+import static RestAssuredTestUtilities.SendRequest.*;
 
 public class TestDataProvider extends BaseTest {
 
@@ -34,6 +35,11 @@ public class TestDataProvider extends BaseTest {
         trelloBoard.setIdOrganization(convertJsonValueToStringFromTestData(path, "idOrganization"));
 
         return trelloBoard;
+    }
+
+    public static String convertBoardToJsonAsString(TrelloBoard board) {
+        Gson gson = new Gson();
+        return gson.toJson(board);
     }
 
 }

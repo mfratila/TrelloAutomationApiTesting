@@ -55,7 +55,7 @@ public class FrameworkUtilities {
         response.then().log().all();
     }
 
-    public Map<String, String> getApiKeyAndTokenToRequestSpecification() {
+    public static Map<String, String> getApiKeyAndTokenFromConfigFile() {
         Map<String, String> apiInfo = new HashMap<>();
         apiInfo.put("key", properties.getProperty("ApiKey"));
         apiInfo.put("token", properties.getProperty("ApiToken"));
