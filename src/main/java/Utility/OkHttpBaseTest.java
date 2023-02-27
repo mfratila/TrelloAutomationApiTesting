@@ -11,7 +11,7 @@ public class OkHttpBaseTest extends FrameworkUtilities{
 
     @BeforeSuite
     public void setBaseURI() {
-        client = new OkHttpClient();
+        client = new OkHttpClient.Builder().followRedirects(false).build();
         uri = HttpUrl.parse(readConfigurationFile("Base_URI"));
 
     }
