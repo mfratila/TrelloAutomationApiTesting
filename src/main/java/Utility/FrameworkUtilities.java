@@ -3,6 +3,11 @@ package Utility;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import okhttp3.Request;
+import okhttp3.ResponseBody;
+import okio.Buffer;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -11,6 +16,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Properties;
 
 import io.restassured.response.Response;
@@ -81,7 +87,7 @@ public class FrameworkUtilities {
         test.log(Status.INFO, "Response Body: " + responseBody);
     }
 
-    public void logTestResult(ITestContext context, ExtentTest test) {
+    public static void logTestResult(ITestContext context, ExtentTest test) {
         if (context.getFailedTests().size() > 0) {
             test.log(Status.FAIL, "Request failed: " + context.getFailedTests().getAllResults());
         } else if (context.getSkippedTests().size() > 0) {
@@ -91,4 +97,36 @@ public class FrameworkUtilities {
         }
     }
 
+    public static void logResults(ExtentTest test, ITestContext context, okhttp3.Response response) throws IOException {
+
+        Request request = response.request();
+        String responseBody = Objects.requireNonNull(response.body()).string();
+
+        logTestResult(context, test);
+
+        test.info(responseBody);
+        test.info("Status Code: " + response.code());
+        test.info("Request URL: " + request.url().toString());
+        test.info("Request Method: " + request.method());
+        test.info("Request Headers " + request.headers().toString());
+        test.info("Response Headers: " + response.headers().toString());
+        test.info("Response time: " + (response.receivedResponseAtMillis() - response.sentRequestAtMillis()) + "ms");
+        // Log response body as HTML
+        test.info(MarkupHelper.createCodeBlock(responseBody, CodeLanguage.JSON));
+    }
+
+    public static Buffer bufferResponse(okhttp3.Response response) throws IOException {
+        return response.peekBody(Long.MAX_VALUE).source().buffer().clone();
+    }
+
+    public static okhttp3.Response getBufferedResponse(okhttp3.Response response) throws IOException {
+
+        Buffer responseBuffer = bufferResponse(response);
+
+        return response
+                .newBuilder()
+                .body(ResponseBody
+                        .create(response.body().contentType(), responseBuffer.size(), responseBuffer))
+                .build();
+    }
 }

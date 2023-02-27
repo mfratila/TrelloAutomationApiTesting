@@ -22,7 +22,7 @@ public abstract class BaseTest extends FrameworkUtilities {
                 .addQueryParams(getApiKeyAndTokenFromConfigFile())
                 .build();
 
-        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("test-output/extent.html");
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("test-output/RestAssuredReport.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }

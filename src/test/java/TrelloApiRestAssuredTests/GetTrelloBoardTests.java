@@ -40,7 +40,8 @@ public class GetTrelloBoardTests extends BaseTest {
         ExtentTest testLogger = createTestLogger("Get Board by ID",
                 "Test that verifies the functionality of the GET method when provided a specific ID as a Path Parameter");
         String boardId = getBoardIdFromFirstBoard();
-        Response actualResponse = sendGETByIdRequest(buildRequestWithPathParam(requestSpec, ID_PATH_PARAM, boardId));
+        Response actualResponse = sendGETByIdRequest(buildRequestWithPathParam(requestSpec,
+                                                        ID_PATH_PARAM, boardId));
 
         Map<String, String> actualResponseData = getActualResponseData(actualResponse);
         Map<String, String> expectedResponseData = getExpectedResponseData(Constants.POSTRequest_PAYLOAD_PATH);
