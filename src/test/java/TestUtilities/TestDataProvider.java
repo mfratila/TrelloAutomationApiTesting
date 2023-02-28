@@ -14,6 +14,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import static RestAssuredTestUtilities.BuildRequest.*;
 import static RestAssuredTestUtilities.SendRequest.*;
@@ -43,9 +44,9 @@ public class TestDataProvider extends RestAssuredBaseTest {
         return shortUrl.substring(shortUrl.lastIndexOf("/") + 1);
     }
 
-    public static String getBoardIdFromRetrofitResponse(TrelloBoard response) {
+    public static String getBoardIdFromRetrofitResponse(TrelloBoard response) throws NullPointerException {
         String shortUrl = response.getShortUrl();
-        return shortUrl.substring(shortUrl.lastIndexOf("/") + 1);
+        return Objects.requireNonNull(shortUrl.substring(shortUrl.lastIndexOf("/") + 1));
     }
 
     public static TrelloBoard createTrelloPojo(String path) {

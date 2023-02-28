@@ -15,7 +15,7 @@ import static RestAssuredTestUtilities.BuildRequest.*;
 import static RestAssuredTestUtilities.SendRequest.*;
 import static TestUtilities.TestDataProvider.*;
 import static TestUtilities.CheckResponseIsValid.*;
-import static TestUtilities.PrepareActualResponse.*;
+import static RestAssuredTestUtilities.PrepareActualResponse.*;
 import static TestUtilities.PrepareExpectedResponse.*;
 import static TestUtilities.TestAssertions.*;
 

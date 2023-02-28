@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import java.util.Map;
 
 import static RestAssuredTestUtilities.BuildRequest.*;
-import static TestUtilities.PrepareActualResponse.*;
+import static RestAssuredTestUtilities.PrepareActualResponse.*;
 import static TestUtilities.PrepareExpectedResponse.*;
 import static RestAssuredTestUtilities.SendRequest.*;
 import static TestUtilities.TestAssertions.*;

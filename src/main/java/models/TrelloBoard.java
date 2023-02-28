@@ -91,4 +91,15 @@ public class TrelloBoard {
         this.shortUrl = shortUrl;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                "   \"id\"=\"" + id + '\"' +
+                ",\n    \"name\"=\"" + name + '\"' +
+                ",\n     \"desc\"=\"" + desc + '\"' +
+                ",\n     \"idOrganization\"=\"" + idOrganization + '\"' +
+                ",\n     \"url\"=\"" + url + '\"' +
+                ",\n     \"shortUrl\"=\"" + shortUrl + '\"' +
+                "\n}";
+    }
 }

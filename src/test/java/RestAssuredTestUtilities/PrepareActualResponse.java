@@ -1,4 +1,4 @@
-package TestUtilities;
+package RestAssuredTestUtilities;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

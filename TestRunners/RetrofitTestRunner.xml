@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"/>
+    </listeners>
+    <test name="My Test">
+        <parameter name="spark.reporter.out" value="reports"/>
+        <parameter name="reportTitle" value="My Test Report" />
+        <classes>
+            <class name="TrelloApiRetrofitTests.CreateTrelloBoardTests" />
+            <class name="TrelloApiRetrofitTests.GetTrelloBoardTests" />
+            <class name="TrelloApiRetrofitTests.UpdateTrelloBoardTests" />
+            <class name="TrelloApiRetrofitTests.DeleteTrelloBoardTests" />
+        </classes>
+    </test>
+</suite>

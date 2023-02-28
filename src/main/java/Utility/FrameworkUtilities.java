@@ -5,6 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import models.TrelloBoard;
 import okhttp3.Request;
 import okhttp3.ResponseBody;
 import okio.Buffer;
@@ -14,10 +15,7 @@ import org.json.simple.parser.JSONParser;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Properties;
+import java.util.*;
 
 import io.restassured.response.Response;
 import org.json.simple.parser.ParseException;
@@ -106,13 +104,51 @@ public class FrameworkUtilities {
 
         test.info(responseBody);
         test.info("Status Code: " + response.code());
-        test.info("Request URL: " + request.url().toString());
+        test.info("Request URL: " + request.url());
         test.info("Request Method: " + request.method());
-        test.info("Request Headers " + request.headers().toString());
-        test.info("Response Headers: " + response.headers().toString());
+        test.info("Request Headers " + request.headers());
+        test.info("Response Headers: " + response.headers());
         test.info("Response time: " + (response.receivedResponseAtMillis() - response.sentRequestAtMillis()) + "ms");
         // Log response body as HTML
         test.info(MarkupHelper.createCodeBlock(responseBody, CodeLanguage.JSON));
+    }
+
+    public static void logResultsForVoidResponse(ExtentTest test, ITestContext context, retrofit2.Response<Void> response) {
+
+        Request request = response.raw().request();
+        logTestResult(context, test);
+
+        test.info("Status Code: " + response.code());
+        test.info("Request URL: " + request.url());
+        test.info("Request Method: " + request.method());
+        test.info("Request Headers " + request.headers());
+        test.info("Response Headers: " + response.headers());
+
+    }
+
+    public static void logResultsForListResponse(ExtentTest test, ITestContext context, retrofit2.Response<List<TrelloBoard>> response) {
+
+        Request request = response.raw().request();
+        logTestResult(context, test);
+
+        test.info("Status Code: " + response.code());
+        test.info("Request URL: " + request.url());
+        test.info("Request Method: " + request.method());
+        test.info("Request Headers " + request.headers());
+        test.info("Response Headers: " + response.headers());
+
+    }
+
+    public static void logResults(ExtentTest test, ITestContext context, retrofit2.Response<TrelloBoard> response) {
+
+        Request request = response.raw().request();
+        logTestResult(context, test);
+
+        test.info("Status Code: " + response.code());
+        test.info("Request URL: " + request.url());
+        test.info("Request Method: " + request.method());
+        test.info("Request Headers " + request.headers());
+        test.info("Response Headers: " + response.headers());
     }
 
     public static Buffer bufferResponse(okhttp3.Response response) throws IOException {
