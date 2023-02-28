@@ -1,6 +1,6 @@
 package TrelloApiRestAssuredTests;
 
-import Utility.BaseTest;
+import Utility.RestAssuredBaseTest;
 import Utility.Constants;
 import com.aventstack.extentreports.ExtentTest;
 import io.restassured.response.Response;
@@ -14,7 +14,7 @@ import static TestUtilities.TestDataProvider.*;
 import static TestUtilities.CheckResponseIsValid.*;
 
 
-public class DeleteTrelloBoardTests extends BaseTest {
+public class DeleteTrelloBoardTests extends RestAssuredBaseTest {
     @Test
     public void deleteBoardById(ITestContext context) {
 

@@ -1,6 +1,6 @@
 package TrelloApiRestAssuredTests;
 
-import Utility.BaseTest;
+import Utility.RestAssuredBaseTest;
 
 import Utility.Constants;
 import com.aventstack.extentreports.ExtentTest;
@@ -22,7 +22,7 @@ import static TestUtilities.CheckResponseIsValid.*;
 import static RestAssuredTestUtilities.CleanupAfterTest.*;
 
 
-public class UpdateTrelloBoardTests extends BaseTest {
+public class UpdateTrelloBoardTests extends RestAssuredBaseTest {
 
     @Test
     public void updateBoardById(ITestContext context) throws JsonProcessingException {

@@ -1,6 +1,6 @@
 package TrelloApiRestAssuredTests;
 
-import Utility.BaseTest;
+import Utility.RestAssuredBaseTest;
 import Utility.Constants;
 import com.aventstack.extentreports.ExtentTest;
 import io.restassured.response.Response;
@@ -14,7 +14,7 @@ import static TestUtilities.TestDataProvider.*;
 import static TestUtilities.CheckResponseIsValid.*;
 import static RestAssuredTestUtilities.CleanupAfterTest.*;
 
-public class CreateTrelloBoardTests extends BaseTest {
+public class CreateTrelloBoardTests extends RestAssuredBaseTest {
     @Test
     public void createNewBoard(ITestContext context) {
 

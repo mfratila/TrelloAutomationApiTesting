@@ -1,6 +1,6 @@
 package RestAssuredTestUtilities;
 
-import TestUtilities.Constants;
+import Utility.Constants;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -15,21 +15,21 @@ public class SendRequest {
 
     public static Response sendGETRequest(RequestSpecification requestSpec) {
 
-        return requestSpec.when().get(Constants.GET_ALL_ENDPOINT);
+        return requestSpec.when().get(Utility.Constants.GET_ALL_ENDPOINT);
     }
 
     public static Response sendGETByIdRequest(RequestSpecification requestSpec) {
 
-        return requestSpec.when().get(Constants.GET_BY_ID_ENDPOINT);
+        return requestSpec.when().get(Utility.Constants.GET_BY_ID_ENDPOINT);
     }
 
     public static Response sendDELETERequest(RequestSpecification requestSpec) {
 
-        return requestSpec.when().delete(Constants.DELETE_ENDPOINT);
+        return requestSpec.when().delete(Utility.Constants.DELETE_ENDPOINT);
     }
 
     public static Response sendPUTRequest(RequestSpecification requestSpec) {
 
-        return requestSpec.when().put(Constants.PUT_ENDPOINT);
+        return requestSpec.when().put(Utility.Constants.PUT_ENDPOINT);
     }
 }

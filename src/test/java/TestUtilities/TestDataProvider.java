@@ -1,6 +1,6 @@
 package TestUtilities;
 
-import Utility.BaseTest;
+import Utility.RestAssuredBaseTest;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -18,7 +18,7 @@ import java.io.IOException;
 import static RestAssuredTestUtilities.BuildRequest.*;
 import static RestAssuredTestUtilities.SendRequest.*;
 
-public class TestDataProvider extends BaseTest {
+public class TestDataProvider extends RestAssuredBaseTest {
 
     public static String getBoardIdFromFirstBoard() {
 
@@ -40,6 +40,11 @@ public class TestDataProvider extends BaseTest {
     public static String getBoardIdFromOkHttpResponse(String responseBody) {
         JsonObject jsonResponseBody = parseResponseBodyIntoJson(responseBody);
         String shortUrl = jsonResponseBody.get("shortUrl").getAsString();
+        return shortUrl.substring(shortUrl.lastIndexOf("/") + 1);
+    }
+
+    public static String getBoardIdFromRetrofitResponse(TrelloBoard response) {
+        String shortUrl = response.getShortUrl();
         return shortUrl.substring(shortUrl.lastIndexOf("/") + 1);
     }
 

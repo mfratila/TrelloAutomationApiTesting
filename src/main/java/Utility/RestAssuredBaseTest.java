@@ -10,7 +10,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-public abstract class BaseTest extends FrameworkUtilities {
+public abstract class RestAssuredBaseTest extends FrameworkUtilities {
     protected static RequestSpecification requestSpec;
     protected static ResponseSpecification responseSpec;
 

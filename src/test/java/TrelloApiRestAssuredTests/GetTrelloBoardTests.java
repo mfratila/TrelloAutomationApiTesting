@@ -1,6 +1,6 @@
 package TrelloApiRestAssuredTests;
 
-import Utility.BaseTest;
+import Utility.RestAssuredBaseTest;
 
 import Utility.Constants;
 import com.aventstack.extentreports.ExtentTest;
@@ -20,7 +20,7 @@ import static TestUtilities.PrepareExpectedResponse.*;
 import static TestUtilities.TestAssertions.*;
 
 
-public class GetTrelloBoardTests extends BaseTest {
+public class GetTrelloBoardTests extends RestAssuredBaseTest {
 
 
     @Test

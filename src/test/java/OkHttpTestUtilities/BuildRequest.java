@@ -1,5 +1,6 @@
 package OkHttpTestUtilities;
 
+import Utility.Constants;
 import Utility.OkHttpBaseTest;
 import okhttp3.HttpUrl;
 import okhttp3.Request;
@@ -8,14 +9,12 @@ import okhttp3.RequestBody;
 import java.util.Map;
 import java.util.Objects;
 
-import static TestUtilities.Constants.*;
-
 
 public class BuildRequest extends OkHttpBaseTest {
 
     public static Request buildGETRequest() {
 
-        HttpUrl endpoint = createEndpoint(GET_ALL_ENDPOINT);
+        HttpUrl endpoint = createEndpoint(Constants.GET_ALL_ENDPOINT);
 
         return new Request.Builder()
                 .url(endpoint)
@@ -25,7 +24,7 @@ public class BuildRequest extends OkHttpBaseTest {
 
     public static Request buildGETByIdRequest(String boardId) {
 
-        HttpUrl endpoint = createEndpointWithId(GET_BY_ID_ENDPOINT, boardId);
+        HttpUrl endpoint = createEndpointWithId(Constants.GET_BY_ID_ENDPOINT, boardId);
 
         return new Request.Builder()
                 .url(endpoint)
@@ -34,7 +33,7 @@ public class BuildRequest extends OkHttpBaseTest {
     }
 
     public static Request buildDELETERequest(String boardId) {
-        HttpUrl endpoint = createEndpointWithId(DELETE_ENDPOINT, boardId);
+        HttpUrl endpoint = createEndpointWithId(Constants.DELETE_ENDPOINT, boardId);
 
         return new Request.Builder()
                 .url(endpoint)
@@ -43,7 +42,7 @@ public class BuildRequest extends OkHttpBaseTest {
     }
 
     public static Request buildPOSTRequest(RequestBody payload) {
-        HttpUrl endpoint = createEndpoint(POST_ENDPOINT);
+        HttpUrl endpoint = createEndpoint(Constants.POST_ENDPOINT);
 
         return new Request.Builder()
                 .url(endpoint)
@@ -52,7 +51,7 @@ public class BuildRequest extends OkHttpBaseTest {
     }
 
     public static Request buildPUTRequest(String boardId, RequestBody payload) {
-        HttpUrl endpoint = createEndpointWithId(PUT_ENDPOINT, boardId);
+        HttpUrl endpoint = createEndpointWithId(Constants.PUT_ENDPOINT, boardId);
 
         return new Request.Builder()
                 .url(endpoint)
