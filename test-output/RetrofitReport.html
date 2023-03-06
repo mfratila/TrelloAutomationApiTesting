@@ -1,0 +1,823 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Mar 1, 2023 09:25:41 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create New Board</p>
+            <p class="text-sm">
+              <span>9:25:41 AM</span> / <span>00:00:00:836</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create New Board</h5>
+<span class='badge badge-success'>03.01.2023 9:25:41 AM</span>
+<span class='badge badge-danger'>03.01.2023 9:25:42 AM</span>
+<span class='badge badge-default'>00:00:00:836</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Test that verifies the functionality of the POST method</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:41 AM</td>
+        <td>
+          Sending Request
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:25:42 AM</td>
+        <td>
+          Request successful
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:42 AM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:42 AM</td>
+        <td>
+          Request URL: https://api.trello.com/1/boards/?key=bede52f2bd2294db6438aa654bc8065f&token=ATTAe0488b24db196d641dda9d08d99210ebcb608f9bba907c0da1c85a0443ed1e5d8AD54640
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:42 AM</td>
+        <td>
+          Request Method: POST
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:42 AM</td>
+        <td>
+          Request Headers 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:42 AM</td>
+        <td>
+          Response Headers: date: Wed, 01 Mar 2023 07:25:42 GMT
+content-type: application/json; charset=utf-8
+content-length: 1816
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+surrogate-control: no-store
+cache-control: max-age=0, must-revalidate, no-cache, no-store
+pragma: no-cache
+expires: Thu, 01 Jan 1970 00:00:00
+x-trello-version: 1.192655.0
+x-trello-environment: Production
+access-control-allow-origin: *
+access-control-allow-methods: GET, PUT, POST, DELETE
+access-control-allow-headers: Authorization, Accept, Content-Type
+access-control-expose-headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+x-rate-limit-db-query-time-interval-ms: 600000
+x-rate-limit-db-query-time-max: 7200000
+x-rate-limit-db-query-time-remaining: 7199990
+x-rate-limit-api-token-interval-ms: 10000
+x-rate-limit-api-token-max: 100
+x-rate-limit-api-token-remaining: 99
+x-rate-limit-api-key-interval-ms: 10000
+x-rate-limit-api-key-max: 300
+x-rate-limit-api-key-remaining: 299
+x-rate-limit-member-interval-ms: 10000
+x-rate-limit-member-max: 375
+x-rate-limit-member-remaining: 374
+set-cookie: ██
+x-server-time: 1677655542428
+server: AtlassianEdge
+expect-ct: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+atl-traceid: 8c547687eca90baf
+report-to: {"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}
+nel: {"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}
+strict-transport-security: max-age=63072000; preload
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get all Boards</p>
+            <p class="text-sm">
+              <span>9:25:44 AM</span> / <span>00:00:00:238</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get all Boards</h5>
+<span class='badge badge-success'>03.01.2023 9:25:44 AM</span>
+<span class='badge badge-danger'>03.01.2023 9:25:44 AM</span>
+<span class='badge badge-default'>00:00:00:238</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Test that verifies the functionality of the GET method</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:44 AM</td>
+        <td>
+          Sending Request
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:25:44 AM</td>
+        <td>
+          Request successful
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:44 AM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:44 AM</td>
+        <td>
+          Request URL: https://api.trello.com/1/members/me/boards?key=bede52f2bd2294db6438aa654bc8065f&token=ATTAe0488b24db196d641dda9d08d99210ebcb608f9bba907c0da1c85a0443ed1e5d8AD54640
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:44 AM</td>
+        <td>
+          Request Method: GET
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:44 AM</td>
+        <td>
+          Request Headers 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:44 AM</td>
+        <td>
+          Response Headers: date: Wed, 01 Mar 2023 07:25:44 GMT
+content-type: application/json; charset=utf-8
+content-length: 4215
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+surrogate-control: no-store
+cache-control: max-age=0, must-revalidate, no-cache, no-store
+pragma: no-cache
+expires: Thu, 01 Jan 1970 00:00:00
+x-trello-version: 1.192655.0
+x-trello-environment: Production
+set-cookie: ██
+set-cookie: ██
+access-control-allow-origin: *
+access-control-allow-methods: GET, PUT, POST, DELETE
+access-control-allow-headers: Authorization, Accept, Content-Type
+access-control-expose-headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+x-rate-limit-api-token-interval-ms: 10000
+x-rate-limit-api-token-max: 100
+x-rate-limit-api-token-remaining: 97
+x-rate-limit-db-query-time-interval-ms: 600000
+x-rate-limit-db-query-time-max: 7200000
+x-rate-limit-db-query-time-remaining: 7199990
+x-rate-limit-api-key-interval-ms: 10000
+x-rate-limit-api-key-max: 300
+x-rate-limit-api-key-remaining: 297
+x-rate-limit-member-interval-ms: 10000
+x-rate-limit-member-max: 375
+x-rate-limit-member-remaining: 372
+x-server-time: 1677655544445
+x-trello-actual-fastget-path: fast
+server: AtlassianEdge
+expect-ct: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+atl-traceid: a3e20346ddacbf73
+report-to: {"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}
+nel: {"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}
+strict-transport-security: max-age=63072000; preload
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get Board by ID</p>
+            <p class="text-sm">
+              <span>9:25:44 AM</span> / <span>00:00:01:679</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get Board by ID</h5>
+<span class='badge badge-success'>03.01.2023 9:25:44 AM</span>
+<span class='badge badge-danger'>03.01.2023 9:25:46 AM</span>
+<span class='badge badge-default'>00:00:01:679</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Test that verifies the functionality of the GET method when provided a specific ID as a Path Parameter</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:44 AM</td>
+        <td>
+          Sending Request
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:25:46 AM</td>
+        <td>
+          Request successful
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:46 AM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:46 AM</td>
+        <td>
+          Request URL: https://api.trello.com/1/boards/ThyMElAD?key=bede52f2bd2294db6438aa654bc8065f&token=ATTAe0488b24db196d641dda9d08d99210ebcb608f9bba907c0da1c85a0443ed1e5d8AD54640
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:46 AM</td>
+        <td>
+          Request Method: GET
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:46 AM</td>
+        <td>
+          Request Headers 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:46 AM</td>
+        <td>
+          Response Headers: date: Wed, 01 Mar 2023 07:25:45 GMT
+content-type: application/json; charset=utf-8
+content-length: 1804
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+surrogate-control: no-store
+cache-control: max-age=0, must-revalidate, no-cache, no-store
+pragma: no-cache
+expires: Thu, 01 Jan 1970 00:00:00
+x-trello-version: 1.192655.0
+x-trello-environment: Production
+set-cookie: ██
+set-cookie: ██
+access-control-allow-origin: *
+access-control-allow-methods: GET, PUT, POST, DELETE
+access-control-allow-headers: Authorization, Accept, Content-Type
+access-control-expose-headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+x-rate-limit-api-token-interval-ms: 10000
+x-rate-limit-api-token-max: 100
+x-rate-limit-api-token-remaining: 95
+x-rate-limit-db-query-time-interval-ms: 600000
+x-rate-limit-db-query-time-max: 7200000
+x-rate-limit-db-query-time-remaining: 7199990
+x-rate-limit-api-key-interval-ms: 10000
+x-rate-limit-api-key-max: 300
+x-rate-limit-api-key-remaining: 295
+x-rate-limit-member-interval-ms: 10000
+x-rate-limit-member-max: 375
+x-rate-limit-member-remaining: 370
+x-server-time: 1677655545073
+server: AtlassianEdge
+expect-ct: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+atl-traceid: b81da29361de387c
+report-to: {"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}
+nel: {"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}
+strict-transport-security: max-age=63072000; preload
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update Board by ID</p>
+            <p class="text-sm">
+              <span>9:25:46 AM</span> / <span>00:00:01:310</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Update Board by ID</h5>
+<span class='badge badge-success'>03.01.2023 9:25:46 AM</span>
+<span class='badge badge-danger'>03.01.2023 9:25:47 AM</span>
+<span class='badge badge-default'>00:00:01:310</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Test that verifies the functionality of the PUT method</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:46 AM</td>
+        <td>
+          Sending Request
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:25:47 AM</td>
+        <td>
+          Request successful
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:47 AM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:47 AM</td>
+        <td>
+          Request URL: https://api.trello.com/1/boards/CIZy5B6C?key=bede52f2bd2294db6438aa654bc8065f&token=ATTAe0488b24db196d641dda9d08d99210ebcb608f9bba907c0da1c85a0443ed1e5d8AD54640
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:47 AM</td>
+        <td>
+          Request Method: PUT
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:47 AM</td>
+        <td>
+          Request Headers 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:47 AM</td>
+        <td>
+          Response Headers: date: Wed, 01 Mar 2023 07:25:47 GMT
+content-type: application/json; charset=utf-8
+content-length: 1837
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+surrogate-control: no-store
+cache-control: max-age=0, must-revalidate, no-cache, no-store
+pragma: no-cache
+expires: Thu, 01 Jan 1970 00:00:00
+x-trello-version: 1.192655.0
+x-trello-environment: Production
+access-control-allow-origin: *
+access-control-allow-methods: GET, PUT, POST, DELETE
+access-control-allow-headers: Authorization, Accept, Content-Type
+access-control-expose-headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+x-rate-limit-api-token-interval-ms: 10000
+x-rate-limit-api-token-max: 100
+x-rate-limit-api-token-remaining: 92
+x-rate-limit-db-query-time-interval-ms: 600000
+x-rate-limit-db-query-time-max: 7200000
+x-rate-limit-db-query-time-remaining: 7199990
+x-rate-limit-api-key-interval-ms: 10000
+x-rate-limit-api-key-max: 300
+x-rate-limit-api-key-remaining: 292
+x-rate-limit-member-interval-ms: 10000
+x-rate-limit-member-max: 375
+x-rate-limit-member-remaining: 367
+set-cookie: ██
+x-server-time: 1677655547247
+server: AtlassianEdge
+expect-ct: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+atl-traceid: a87992ae68061e1f
+report-to: {"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}
+nel: {"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}
+strict-transport-security: max-age=63072000; preload
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete Board by ID</p>
+            <p class="text-sm">
+              <span>9:25:48 AM</span> / <span>00:00:02:482</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Delete Board by ID</h5>
+<span class='badge badge-success'>03.01.2023 9:25:48 AM</span>
+<span class='badge badge-danger'>03.01.2023 9:25:51 AM</span>
+<span class='badge badge-default'>00:00:02:482</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Test that verifies the functionality of the DELETE method</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:48 AM</td>
+        <td>
+          Sending Request
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:25:51 AM</td>
+        <td>
+          Request successful
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:51 AM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:51 AM</td>
+        <td>
+          Request URL: https://api.trello.com/1/boards/KMSAHPWL?key=bede52f2bd2294db6438aa654bc8065f&token=ATTAe0488b24db196d641dda9d08d99210ebcb608f9bba907c0da1c85a0443ed1e5d8AD54640
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:51 AM</td>
+        <td>
+          Request Method: DELETE
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:51 AM</td>
+        <td>
+          Request Headers 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:51 AM</td>
+        <td>
+          Response Headers: date: Wed, 01 Mar 2023 07:25:51 GMT
+content-type: application/json; charset=utf-8
+content-length: 16
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+surrogate-control: no-store
+cache-control: max-age=0, must-revalidate, no-cache, no-store
+pragma: no-cache
+expires: Thu, 01 Jan 1970 00:00:00
+x-trello-version: 1.192655.0
+x-trello-environment: Production
+access-control-allow-origin: *
+access-control-allow-methods: GET, PUT, POST, DELETE
+access-control-allow-headers: Authorization, Accept, Content-Type
+access-control-expose-headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+x-rate-limit-api-token-interval-ms: 10000
+x-rate-limit-api-token-max: 100
+x-rate-limit-api-token-remaining: 99
+x-rate-limit-db-query-time-interval-ms: 600000
+x-rate-limit-db-query-time-max: 7200000
+x-rate-limit-db-query-time-remaining: 7199990
+x-rate-limit-api-key-interval-ms: 10000
+x-rate-limit-api-key-max: 300
+x-rate-limit-api-key-remaining: 299
+x-rate-limit-member-interval-ms: 10000
+x-rate-limit-member-max: 375
+x-rate-limit-member-remaining: 374
+set-cookie: ██
+x-server-time: 1677655551455
+server: AtlassianEdge
+expect-ct: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+atl-traceid: ab56f1ff9178d301
+report-to: {"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}
+nel: {"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}
+strict-transport-security: max-age=63072000; preload
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Mar 1, 2023 09:25:41 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Mar 1, 2023 09:25:51 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>5</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>5</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='14%'><b>5</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>30</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Create New Board":0.836,"Get all Boards":0.238,"Get Board by ID":1.679,"Update Board by ID":1.31,"Delete Board by ID":2.482
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 5,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 5,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 30
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
