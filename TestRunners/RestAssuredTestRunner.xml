@@ -7,10 +7,10 @@
         <parameter name="spark.reporter.out" value="reports"/>
         <parameter name="reportTitle" value="My Test Report" />
         <classes>
-            <class name="TrelloApiRestAssuredTests.CreateTrelloBoardTests" />
-            <class name="TrelloApiRestAssuredTests.GetTrelloBoardTests" />
-            <class name="TrelloApiRestAssuredTests.UpdateTrelloBoardTests" />
-            <class name="TrelloApiRestAssuredTests.DeleteTrelloBoardTests" />
+            <class name="restAssured_tests.CreateTrelloBoardTests" />
+            <class name="restAssured_tests.GetTrelloBoardTests" />
+            <class name="restAssured_tests.UpdateTrelloBoardTests" />
+            <class name="restAssured_tests.DeleteTrelloBoardTests" />
         </classes>
     </test>
 </suite>
