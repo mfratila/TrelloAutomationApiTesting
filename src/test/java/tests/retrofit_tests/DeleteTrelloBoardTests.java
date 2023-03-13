@@ -1,5 +1,6 @@
 package tests.retrofit_tests;
 
+import io.qameta.allure.Description;
 import utilities.Constants;
 import tests.base_tests.RetrofitBaseTest;
 import com.aventstack.extentreports.ExtentTest;
@@ -16,6 +17,7 @@ import static utilities.common_utilities.TestDataProvider.getBoardIdFromRetrofit
 
 public class DeleteTrelloBoardTests extends RetrofitBaseTest {
     @Test
+    @Description("Test that verifies the functionality of the DELETE method")
     public void testDeleteBoard(ITestContext context) throws Exception {
 
         ExtentTest testLogger = createTestLogger("Delete Board by ID",

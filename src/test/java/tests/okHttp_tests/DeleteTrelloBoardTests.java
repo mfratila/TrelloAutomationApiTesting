@@ -1,5 +1,6 @@
 package tests.okHttp_tests;
 
+import io.qameta.allure.Description;
 import utilities.Constants;
 import tests.base_tests.OkHttpBaseTest;
 import com.aventstack.extentreports.ExtentTest;
@@ -19,6 +20,7 @@ import static utilities.common_utilities.TestDataProvider.getBoardIdFromOkHttpRe
 
 public class DeleteTrelloBoardTests extends OkHttpBaseTest {
     @Test
+    @Description("Test that verifies the functionality of the DELETE method")
     public void deleteBoardById(ITestContext context) throws IOException {
 
         ExtentTest testLogger = createTestLogger("Delete Board by ID",

@@ -1,5 +1,6 @@
 package tests.okHttp_tests;
 
+import io.qameta.allure.Description;
 import utilities.Constants;
 import tests.base_tests.OkHttpBaseTest;
 import com.aventstack.extentreports.ExtentTest;
@@ -27,6 +28,7 @@ public class GetTrelloBoardTests extends OkHttpBaseTest {
     String responseBodyAsString;
 
     @Test
+    @Description("Test that verifies the functionality of the GET method")
     public void getAllBoards(ITestContext context) throws IOException {
 
         ExtentTest testLogger = createTestLogger("Get all Boards",
@@ -45,6 +47,7 @@ public class GetTrelloBoardTests extends OkHttpBaseTest {
     }
 
     @Test
+    @Description("Test that verifies the functionality of the GET method when provided a specific ID as a Path Parameter")
     public void getBoardById(ITestContext context) throws IOException {
 
         ExtentTest testLogger = createTestLogger("Get Board by ID",

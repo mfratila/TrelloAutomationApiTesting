@@ -1,5 +1,6 @@
 package tests.restAssured_tests;
 
+import io.qameta.allure.Description;
 import tests.base_tests.RestAssuredBaseTest;
 
 import utilities.Constants;
@@ -25,6 +26,7 @@ import static utilities.restAssured_utilities.CleanupAfterTest.*;
 public class UpdateTrelloBoardTests extends RestAssuredBaseTest {
 
     @Test
+    @Description("Test that verifies the functionality of the PUT method")
     public void updateBoardById(ITestContext context) throws JsonProcessingException {
 
         ExtentTest testLogger = createTestLogger("Update Board by ID",
