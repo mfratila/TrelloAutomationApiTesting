@@ -6,11 +6,8 @@
     <test name="My Test">
         <parameter name="spark.reporter.out" value="reports"/>
         <parameter name="reportTitle" value="My Test Report" />
-        <classes>
-            <class name="retrofit_tests.CreateTrelloBoardTests" />
-            <class name="retrofit_tests.GetTrelloBoardTests" />
-            <class name="retrofit_tests.UpdateTrelloBoardTests" />
-            <class name="retrofit_tests.DeleteTrelloBoardTests" />
-        </classes>
+        <packages>
+            <package name="tests.retrofit_tests" />
+        </packages>
     </test>
 </suite>
