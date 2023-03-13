@@ -1,5 +1,6 @@
 package tests.restAssured_tests;
 
+import io.qameta.allure.Description;
 import tests.base_tests.RestAssuredBaseTest;
 
 import utilities.Constants;
@@ -35,6 +36,7 @@ public class GetTrelloBoardTests extends RestAssuredBaseTest {
     }
 
     @Test
+    @Description("Test that verifies the functionality of the GET method when provided a specific ID as a Path Parameter")
     public void getBoardById(ITestContext context) throws JsonProcessingException {
 
         ExtentTest testLogger = createTestLogger("Get Board by ID",

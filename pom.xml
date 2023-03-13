@@ -110,17 +110,39 @@
       <scope>provided</scope>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>2.21.0</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-maven</artifactId>
+      <version>2.10.0</version>
+      <configuration>
+        <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+        <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
+      </configuration>
+    </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.1.0</version> <!-- or a valid version of your choice -->
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>19</source>
+          <target>19</target>
           <annotationProcessorPaths>
             <path>
               <groupId>org.projectlombok</groupId>

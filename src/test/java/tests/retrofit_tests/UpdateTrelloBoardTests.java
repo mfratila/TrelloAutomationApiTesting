@@ -1,5 +1,6 @@
 package tests.retrofit_tests;
 
+import io.qameta.allure.Description;
 import utilities.Constants;
 import tests.base_tests.RetrofitBaseTest;
 import com.aventstack.extentreports.ExtentTest;
@@ -23,6 +24,7 @@ import static utilities.common_utilities.TestDataProvider.getBoardIdFromRetrofit
 public class UpdateTrelloBoardTests extends RetrofitBaseTest {
 
     @Test
+    @Description("Test that verifies the functionality of the PUT method")
     public void testUpdateBoard(ITestContext context) throws Exception {
 
         ExtentTest testLogger = createTestLogger("Update Board by ID",

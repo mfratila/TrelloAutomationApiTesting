@@ -1,5 +1,6 @@
 package tests.okHttp_tests;
 
+import io.qameta.allure.Description;
 import utilities.Constants;
 import tests.base_tests.OkHttpBaseTest;
 import com.aventstack.extentreports.ExtentTest;
@@ -22,6 +23,7 @@ import static utilities.common_utilities.TestDataProvider.*;
 public class CreateTrelloBoardTests extends OkHttpBaseTest {
 
     @Test
+    @Description("Test that verifies the functionality of the POST method.")
     public void createNewBoard(ITestContext context) throws IOException {
 
         ExtentTest testLogger = createTestLogger("Create New Board",

@@ -1,5 +1,6 @@
 package tests.okHttp_tests;
 
+import io.qameta.allure.Description;
 import utilities.Constants;
 import tests.base_tests.OkHttpBaseTest;
 import com.aventstack.extentreports.ExtentTest;
@@ -24,6 +25,7 @@ import static utilities.common_utilities.TestDataProvider.*;
 public class UpdateTrelloBoardTests extends OkHttpBaseTest {
 
     @Test
+    @Description("Test that verifies the functionality of the PUT method")
     public void updateBoardById(ITestContext context) throws IOException {
 
         ExtentTest testLogger = createTestLogger("Update Board by ID",

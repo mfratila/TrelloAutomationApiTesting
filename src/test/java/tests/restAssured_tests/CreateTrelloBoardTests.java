@@ -1,5 +1,6 @@
 package tests.restAssured_tests;
 
+import io.qameta.allure.Description;
 import tests.base_tests.RestAssuredBaseTest;
 import utilities.Constants;
 import com.aventstack.extentreports.ExtentTest;
@@ -22,6 +23,7 @@ import static utilities.restAssured_utilities.CleanupAfterTest.*;
 
 public class CreateTrelloBoardTests extends RestAssuredBaseTest {
     @Test
+    @Description("Test that verifies the functionality of the POST method")
     public void createNewBoard(ITestContext context) throws JsonProcessingException {
 
         ExtentTest testLogger = createTestLogger("Create New Board",

@@ -1,5 +1,6 @@
 package tests.retrofit_tests;
 
+import io.qameta.allure.Description;
 import utilities.Constants;
 import tests.base_tests.RetrofitBaseTest;
 import com.aventstack.extentreports.ExtentTest;
@@ -20,6 +21,7 @@ import static utilities.common_utilities.TestDataProvider.*;
 
 public class GetTrelloBoardTests extends RetrofitBaseTest {
     @Test
+    @Description("Test that verifies the functionality of the GET method")
     public void testGetAllBoards(ITestContext context) throws Exception {
 
         ExtentTest testLogger = createTestLogger("Get all Boards",
@@ -33,6 +35,7 @@ public class GetTrelloBoardTests extends RetrofitBaseTest {
     }
 
     @Test
+    @Description("Test that verifies the functionality of the GET method when provided a specific ID as a Path Parameter")
     public void testGetBoardById(ITestContext context) throws Exception {
 
         ExtentTest testLogger = createTestLogger("Get Board by ID",

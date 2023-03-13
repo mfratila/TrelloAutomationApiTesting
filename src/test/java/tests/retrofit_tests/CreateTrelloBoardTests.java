@@ -1,5 +1,6 @@
 package tests.retrofit_tests;
 
+import io.qameta.allure.Description;
 import utilities.Constants;
 import tests.base_tests.RetrofitBaseTest;
 import com.aventstack.extentreports.ExtentTest;
@@ -21,6 +22,7 @@ import static org.testng.Assert.assertTrue;
 
 public class CreateTrelloBoardTests extends RetrofitBaseTest {
     @Test
+    @Description("Test that verifies the functionality of the POST method")
     public void testCreateBoard(ITestContext context) throws Exception {
 
         ExtentTest testLogger = createTestLogger("Create New Board",

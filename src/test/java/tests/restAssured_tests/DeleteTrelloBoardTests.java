@@ -1,5 +1,6 @@
 package tests.restAssured_tests;
 
+import io.qameta.allure.Description;
 import tests.base_tests.RestAssuredBaseTest;
 import utilities.Constants;
 import com.aventstack.extentreports.ExtentTest;
@@ -16,6 +17,7 @@ import static utilities.common_utilities.CheckResponseIsValid.*;
 
 public class DeleteTrelloBoardTests extends RestAssuredBaseTest {
     @Test
+    @Description("Test that verifies the functionality of the DELETE method")
     public void deleteBoardById(ITestContext context) {
 
         ExtentTest testLogger = createTestLogger("Delete Board by ID",
